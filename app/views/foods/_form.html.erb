@@ -1,8 +1,8 @@
-<%= form_for @food do |f| %>
-  <div class="control-group">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <br/>
-  <%= f.submit class:"btn btn-success" %>
+<%= simple_form_for @food, :html => {:class=> 'form-signin'} do |f| %>
+<%= f.error_notification %>
+<h3 class='text-center'>Food</h3>
+
+  <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "name", input_html: {class: "form-control"} %>
+  <%= f.input :content, required: true, autofocus: true, label: false, placeholder: "description", input_html: {class: "form-control"} %>
+  <%= f.button :submit, class:'btn btn-success btn-lg btn-block' %>
 <% end %>

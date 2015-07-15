@@ -1,6 +1,7 @@
 
 <% @foods.each do |food| %>
-  <%= food.name %>
+  <%= link_to food.name, food %>
 <% end %>
 
 <%= link_to 'New', new_food_path %>
+
