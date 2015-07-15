@@ -1,0 +1,8 @@
+<%= form_for @food do |f| %>
+  <div class="control-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <br/>
+  <%= f.submit class:"btn btn-success" %>
+<% end %>
