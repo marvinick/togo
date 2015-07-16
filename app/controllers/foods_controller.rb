@@ -23,7 +23,7 @@ class FoodsController < ApplicationController
   def edit; end
 
   def update
-    if @food.update
+    if @food.update(food_params)
       redirect_to food_path
     else
       render :edit
