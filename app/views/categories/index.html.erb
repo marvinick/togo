@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <% @categories.each do |category| %>
+      <h4><%= category.name %></h4>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to "New", new_category_path %>
+    </div>
+  </div>
+</div>

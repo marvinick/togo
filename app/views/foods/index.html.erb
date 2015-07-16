@@ -1,7 +1,12 @@
-
-<% @foods.each do |food| %>
-  <%= link_to food.name, food %>
-<% end %>
-
-<%= link_to 'New', new_food_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <% @foods.each do |food| %>
+        <h3><%= link_to food.name, food %></h3>
+      <% end %>
+      <br/>
+      <%= link_to 'New', new_food_path %>
+    </div>
+  </div>
+</div>
 
