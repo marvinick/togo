@@ -1,14 +1,31 @@
 <div id="sticky">
-  <div class="nav">
-    <div class="container">
-      <div class="row">
-        <ul class="pull-left">
-          <li><%= link_to "//gobo", root_path %></li>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "hometasting", root_path, class: "navbar-brand" %>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+
         </ul>
-        <ul class="pull-right">
+          <%= form_tag foods_path, method: "get", class: "navbar-form navbar-left" do %>
+          <div class="form-group">
+            <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "type a product" %>
+          </div>
+          <%= submit_tag "Search", name: nil, class: "btn btn-primary" %>
+          <% end %>
+
+        <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Categories", categories_path %></li>
+          <li><%= link_to "Food", foods_path %></li>
         </ul>
       </div>
     </div>
-  </div>
+  </nav>
 </div>
