@@ -12,7 +12,25 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-
+          <div class='btn-group nav_item'>
+            <%= link_to '#', class: 'btn btn-small dropdown-toggle', 'data-toggle' => 'dropdown' do %>
+              Categories <span class='caret'></span>
+            <% end %>
+            <ul class='dropdown-menu'>
+              <% Category.all.each do |category| %>
+                <li>
+                  <%= link_to category.name, category_path(category) %>
+                </li>
+              <% end %>
+              <li class='divider'></li>
+              <li>
+                <%= link_to (new_category_path) do %>
+                  <i class="icon-plus"></i>
+                  New Category
+                <% end %>
+              </li>
+            </ul>
+          </div>
         </ul>
           <%= form_tag foods_path, method: "get", class: "navbar-form navbar-left" do %>
           <div class="form-group">
@@ -22,7 +40,6 @@
           <% end %>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Categories", categories_path %></li>
           <li><%= link_to "Food", foods_path %></li>
         </ul>
       </div>
