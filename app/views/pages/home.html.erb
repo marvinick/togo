@@ -5,7 +5,7 @@
         <p class="text-center">So you know how to cook? Even your friends and family say you should open your own restaurant?</p>
       </div>
       <div class="col-md-6">
-        <h4>Sign Up here</h4>
+
       </div>
     </div>
   </div>
@@ -80,3 +80,7 @@
       </div>
     </div>
   </footer>
+
+  <% @instagram.each do |instagram| %>
+          <%= image_tag instagram.images.standard_resolution.url %>
+        <% end %>
