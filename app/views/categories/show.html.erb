@@ -1,0 +1,9 @@
+<div class="container">
+  <h3>Category</h3>
+  <h4><%= link_to @category.name %></h4>
+
+  <h4><ul class="list-unstyled"><% @category.foods.each do |food| %>
+      <li><%= food.name %></li>
+    <% end %>
+  </ul></h4>
+</div>
