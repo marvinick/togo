@@ -4,5 +4,13 @@
 
   <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "name", input_html: {class: "form-control"} %>
   <%= f.input :content, required: true, autofocus: true, label: false, placeholder: "description", input_html: {class: "form-control"} %>
+  <div class="control-group">
+    <ul class="list-unstyled">
+      <li><%= f.label "Categories:" %></li>
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+        <% cb.label {cb.check_box(class: "checkbox") + cb.text} %>
+      <% end %>
+    </ul>
+  </div>
   <%= f.button :submit, class:'btn btn-success btn-lg btn-block' %>
 <% end %>

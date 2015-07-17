@@ -34,7 +34,7 @@
   -moz-box-shadow: 0px 0px 15px 0px #000000;
   box-shadow: 0px 0px 15px 0px #000000;
   /* Adds the transparent background */
-  background-color:;
+
   opacity: 0.9;
 }
 
@@ -137,4 +137,11 @@ div.nav_item {
 .neighborhood-guides p {
   font-size: 15px;
   margin-bottom: 13px;
+}
+
+input[type=checkbox] {
+  display: inline;
+  margin-left: 1em;
+  margin-right: 0.5em;
+  line-height: 3em;
 }
