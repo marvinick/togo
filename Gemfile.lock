@@ -51,6 +51,9 @@ GEM
     coffee-script-source (1.9.1.1)
     columnize (0.9.0)
     debug_inspector (0.0.2)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.5.2)
     faraday (0.9.1)
@@ -176,6 +179,7 @@ DEPENDENCIES
   arel (= 6.0.0.beta2)
   byebug
   coffee-rails (~> 4.1.0)
+  dotenv-rails
   font-awesome-rails
   instagram
   jbuilder (~> 2.0)
