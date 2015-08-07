@@ -1,24 +1,25 @@
-<div class="jumbotron">
-  <div class="container">
+<div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <p class="text-center">So you know how to cook? Even your friends and family say you should open your own restaurant?</p>
-        <h3>Steps:</h3>
-        <ul>
-          <li>Have a licensed kitchen</li>
-          <li>Find a licensed kitchen / rent places like churches, restaurant in their down hours, food truck. etc</li>
-          <li>Be certified. Health food card / ServSave</li>
-          <li>get insurance</li>
-          <li>Unleash the chef in you</li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-
+      <div class="jumbotron">
+        <div class="col-md-8">
+          <h3>Share edible to the world</h3>
+        </div>
+        <div class="col-md-4">
+          <h4>Prep</h4>
+          <div id="unstyled">
+            <li>get insurance</li>
+            <li>Unleash the chef in you</li>
+            <li>Have a licensed kitchen</li>
+            <li>Find a licensed kitchen / rent places like churches, restaurant in their down hours, food truck. etc</li>
+            <li>Be certified. Health food card / ServSave</li>
+            <li>Share your garden</li>
+          </ul>
+        </div>
+        </div>
       </div>
     </div>
-  </div>
 </div>
-
+<br/>
 <div class="neighborhood-guides">
   <div class="container">
     <h2 class="text-center">What can you do?</h2>
@@ -78,7 +79,7 @@
     </div>
   </div>
 </div>
-  <hr/>
+  <hr>
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -88,14 +89,15 @@
       </div>
     </div>
   </footer>
-  <hr>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h3 class="text-center">instagram gallery</h3>
-      <% @instagram.each do |instagram| %>
-        <%= image_tag instagram.images.thumbnail.url %>
-      <% end %>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-center">instagram gallery</h3>
+        <% @instagram.each do |instagram| %>
+          <%= image_tag instagram.images.thumbnail.url %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

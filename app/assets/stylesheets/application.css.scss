@@ -16,8 +16,14 @@
  *= require_self
  */
 
+ #unstyled {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+ }
+
  body {
-  padding-top: 60px;
+  padding-top: 70px;
  }
 
  #sticky {
@@ -91,7 +97,7 @@ div.nav_item {
 
 
 .jumbotron {
-  height:350px;
+  height:500px;
 }
 
 .jumbotron .container {
@@ -100,8 +106,7 @@ div.nav_item {
 }
 
 .jumbotron h3 {
-  color: black;
-  font-size: 35px;
+  color: red;
   font-family: 'Shift', sans-serif;
   font-weight: bold;
 }
