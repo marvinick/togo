@@ -16,6 +16,7 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem "font-awesome-rails"
 gem 'instagram'
+gem 'paperclip'
 
 group :development do
   gem 'dotenv-rails'
