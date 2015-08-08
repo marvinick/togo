@@ -3,6 +3,7 @@
     <h3><%= @food.name %></h3>
     <h5><%= @food.content %></h5>
     <br/>
-    <em><%= link_to "Edit", edit_food_path %></em>
+    <em><%= link_to "Edit", edit_food_path %> || <%= link_to "Delete", food_path, method: :delete %></em>
+    <em></em>
   </div>
 </div>

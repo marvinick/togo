@@ -1,16 +1,13 @@
-<div class="jumbotron">
-  <div class="container">
+<div class="container">
   <div class="row">
-    <div class="col-md-6">
-      <p>So you know how to cook? Even your friends and family say you should open your own restaurant?.</P>
-      <p>Find a place to cook it out. Obviuosly it has to be licensed and  inspected by local Health Department<p>
-
-
+    <div class="col-md-4">
+      <center>
       <% @foods.each do |food| %>
         <h3><%= link_to food.name, food %></h3>
       <% end %>
-      <br/>
-      <%= link_to 'New', new_food_path %>
+       <br/>
+      <h4><%= link_to 'New', new_food_path %></h4>
+      </center>
     </div>
   </div>
 </div>
