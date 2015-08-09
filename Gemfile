@@ -4,23 +4,27 @@ gem 'rails', '4.2.0.beta4'
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-
-
 gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# takes care rails 4.2 beta errors
 gem 'arel', '6.0.0.beta2'
+
+# views and forms
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem "font-awesome-rails"
-gem 'instagram'
+
+# authentication
+gem "devise"
 
 # image upload
 gem 'paperclip'
 gem 'carrierwave'
 gem "rmagick"
+gem 'instagram'
 
 group :development do
   gem 'dotenv-rails'

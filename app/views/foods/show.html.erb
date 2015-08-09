@@ -1,9 +1,14 @@
 <div class="container">
   <div class="row">
-    <h3><%= @food.name %></h3>
-    <h5><%= @food.content %></h5>
-    <br/>
-    <em><%= link_to "Edit", edit_food_path %> || <%= link_to "Delete", food_path, method: :delete %></em>
-    <em></em>
+    <div class="col-md-6">
+      <h2><%= @food.name %></h2>
+      <%= image_tag @food.image_url(:show).to_s %>
+    </div>
+    <div class="col-md-6">
+      <h2>Description</h2>
+      <h4>"<%= @food.content %>"</h4>
+    </div>
   </div>
+  <hr>
+  <center><h4><%= link_to "Edit", edit_food_path %> || <%= link_to "Delete", food_path, method: :delete %></h4></center>
 </div>
