@@ -4,7 +4,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email, required: true, label: false, placeholder: "name", autofocus: true %>
+    <%= f.input :username, required: true, label: false, placeholder: "username", autofocus: true %>
     <%= f.input :email, required: true, label: false, placeholder: "email", autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -19,7 +19,6 @@
     <%= f.button :submit, "Update", class: "btn btn-primary btn-block" %>
   </div>
   <br>
-  <%= gravatar_tag current_user.email, size: 100 %>
   <%= link_to "Change Avatar", "http://en.gravatar.com" %>
   <h3>Cancel my account</h3>
   <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>

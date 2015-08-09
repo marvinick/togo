@@ -16,12 +16,6 @@
  *= require_self
  */
 
- #unstyled {
-   padding: 0;
-   margin: 0;
-   list-style: none;
- }
-
  body {
   padding-top: 70px;
  }
@@ -120,8 +114,13 @@ div.nav_item {
   color: red;
 }
 
-.learn-more {
-
+.notice {
+  text-align: center;
+  padding:  .3em .4em;
+  margin:   0 auto .5em;
+  clear:    both;
+  max-width:  46.923em; /* 610/13 */
+  *max-width: 45.750em; /* 610/13.3333 - for IE */
 }
 
 .learn-more h3 {
