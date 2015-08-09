@@ -1,36 +1,30 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-7">
-          <h3>Share edible to the world</h3>
-          <li>get insurance</li>
-          <li>Unleash the chef in you</li>
-          <li>Have a licensed kitchen</li>
-          <li>Find a licensed kitchen / rent places like churches, restaurant in their down hours, food truck. etc</li>
-          <li>Be certified. Health food card / ServSave</li>
-          <li>Share your garden</li>
-        </div>
-        <div class="col-md-5">
-          <%= simple_form_for @food, :html => {:class=> 'form-signin'} do |f| %>
-            <%= f.error_notification %>
-            <h3 class='text-center'>Food</h3>
+  <div class="row">
 
-              <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "name", input_html: {class: "form-control"} %>
-              <%= f.input :content, required: true, autofocus: true, label: false, placeholder: "description", input_html: {class: "form-control"} %>
-              <%= f.file_field :image %>
-              <div class="control-group">
-                <ul class="list-unstyled">
-                  <li><%= f.label "Categories:" %></li>
-                  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
-                    <% cb.label {cb.check_box(class: "checkbox") + cb.text} %>
-                  <% end %>
-                </ul>
-              </div>
-              <%= f.button :submit, class:'btn btn-success btn-lg btn-block' %>
-            <% end %>
-        </div>
-        </div>
-
+    <div class="col-md-7">
+      <h3>Share edible to the world</h3>
+      <li>get insurance</li>
+      <li>Unleash the chef in you</li>
+      <li>Have a licensed kitchen</li>
+      <li>Find a licensed kitchen / rent places like churches, restaurant in their down hours, food truck. etc</li>
+      <li>Be certified. Health food card / ServSave</li>
+      <li>Share your garden</li>
     </div>
+
+    <div class="col-md-5">
+      <%= simple_form_for @user, :html {class: 'form-login'} do |f| %>
+      <h2 class="text-center">Log in</h2>
+      <br/>
+        <div class="form-inputs">
+          <%= f.input :username, required: false, autofocus: true, label: false, placeholder: "username", input_html: {class: "form-control"} %>
+          <%= f.input :password, required: false, label: false, placeholder: "password", input_html: {class: "form-control"} %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+          <%= f.button :submit, "Log in", class: "btn btn-primary btn-block" %>
+        <%= render "devise/shared/links" %>
+      <% end %>
+    </div>
+  </div>
 </div>
 <br/>
 <div class="neighborhood-guides">
