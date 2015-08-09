@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150807030827) do
+ActiveRecord::Schema.define(version: 20150809022907) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150807030827) do
     t.string   "resource_content_type"
     t.integer  "resource_file_size"
     t.datetime "resource_updated_at"
+    t.string   "image"
   end
 
 end

@@ -1,22 +1,35 @@
 <div class="container">
     <div class="row">
-      <div class="jumbotron">
-        <div class="col-md-8">
+        <div class="col-md-7">
           <h3>Share edible to the world</h3>
+          <li>get insurance</li>
+          <li>Unleash the chef in you</li>
+          <li>Have a licensed kitchen</li>
+          <li>Find a licensed kitchen / rent places like churches, restaurant in their down hours, food truck. etc</li>
+          <li>Be certified. Health food card / ServSave</li>
+          <li>Share your garden</li>
         </div>
-        <div class="col-md-4">
-          <h4>Prep</h4>
-          <div id="unstyled">
-            <li>get insurance</li>
-            <li>Unleash the chef in you</li>
-            <li>Have a licensed kitchen</li>
-            <li>Find a licensed kitchen / rent places like churches, restaurant in their down hours, food truck. etc</li>
-            <li>Be certified. Health food card / ServSave</li>
-            <li>Share your garden</li>
-          </ul>
+        <div class="col-md-5">
+          <%= simple_form_for @food, :html => {:class=> 'form-signin'} do |f| %>
+            <%= f.error_notification %>
+            <h3 class='text-center'>Food</h3>
+
+              <%= f.input :name, required: true, autofocus: true, label: false, placeholder: "name", input_html: {class: "form-control"} %>
+              <%= f.input :content, required: true, autofocus: true, label: false, placeholder: "description", input_html: {class: "form-control"} %>
+              <%= f.file_field :image %>
+              <div class="control-group">
+                <ul class="list-unstyled">
+                  <li><%= f.label "Categories:" %></li>
+                  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                    <% cb.label {cb.check_box(class: "checkbox") + cb.text} %>
+                  <% end %>
+                </ul>
+              </div>
+              <%= f.button :submit, class:'btn btn-success btn-lg btn-block' %>
+            <% end %>
         </div>
         </div>
-      </div>
+
     </div>
 </div>
 <br/>

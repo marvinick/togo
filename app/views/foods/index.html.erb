@@ -3,6 +3,7 @@
     <div class="col-md-4">
       <center>
       <% @foods.each do |food| %>
+        <%= image_tag food.image_url(:thumb).to_s %>
         <h3><%= link_to food.name, food %></h3>
       <% end %>
        <br/>

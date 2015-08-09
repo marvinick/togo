@@ -16,7 +16,11 @@ gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem "font-awesome-rails"
 gem 'instagram'
+
+# image upload
 gem 'paperclip'
+gem 'carrierwave'
+gem "rmagick"
 
 group :development do
   gem 'dotenv-rails'
