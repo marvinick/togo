@@ -3,11 +3,9 @@ Rails.application.routes.draw do
   resources :foods
   resources :categories
 
-  #root to: "users#login"
-
   devise_scope :user do
     authenticated :user do
-      root 'foods#index', as: :authenticated_root
+      root 'pages#home', as: :authenticated_root
     end
 
     unauthenticated do

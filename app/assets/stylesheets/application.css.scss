@@ -46,11 +46,11 @@ div.nav_item {
 #sticky li {
   display: inline-block;
   padding-right: 2px;
-  float: none;
+  position: abslute;
 }
 
 .navbar .nav > li > a.brand {
-  padding-left: 0px;
+  padding-left: 10px;
 }
 
 .form-signin {
@@ -85,8 +85,14 @@ div.nav_item {
   font-size: 13px;
 }
 
+.nav navbar-right li {
+  position: absolute;
+  display: inline-block;
+}
+
 .nav li {
   display: inline;
+  position: absolute;
 }
 
 .li {
