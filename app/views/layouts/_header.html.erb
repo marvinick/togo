@@ -37,16 +37,19 @@
                   <%= link_to 'Edit profile', edit_user_registration_path %> |
                   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
                 <% else %>
+
                    <form class="navbar-form navbar-right" role="search">
+                      <em><%= link_to "Sign up", new_user_registration_path %></em> |
+                      <%= simple_form_for(:user, :url => session_path(:user), html: {class: 'form-login'}) do |f| %>
                       <div class="form-group">
-                          <input type="text" class="form-control" name="username" placeholder="Username">
+                          <%= f.input :username, required: false, autofocus: true, label: false, placeholder: "username", input_html: {class: "form-control"} %>
                       </div>
                       <div class="form-group">
-                          <input type="text" class="form-control" name="password" placeholder="Password">
+                          <%= f.input :password, required: false, label: false, placeholder: "password", input_html: {class: "form-control"} %>
                       </div>
-                      <button type="submit" class="btn btn-primary">Sign In</button>
+                      <%= f.button :submit, "Log in", class: "btn btn-primary" %>
                   </form>
-                  <%= link_to "Sign up", new_user_registration_path %>
+                  <% end %>
                 <% end %>
               </div>
             </div>
