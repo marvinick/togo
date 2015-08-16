@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811060337) do
+ActiveRecord::Schema.define(version: 20150816152927) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -41,6 +41,14 @@ ActiveRecord::Schema.define(version: 20150811060337) do
     t.integer  "resource_file_size"
     t.datetime "resource_updated_at"
     t.string   "image"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: true do |t|

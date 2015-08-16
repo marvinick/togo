@@ -13,6 +13,11 @@ gem 'cancan'
 # takes care rails 4.2 beta errors
 gem 'arel', '6.0.0.beta2'
 
+#map
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'nifty-generators'
+
 # views and forms
 gem 'twitter-bootstrap-rails'
 gem 'simple_form'
@@ -44,3 +49,5 @@ group :development, :test do
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
 end
+
+gem 'mocha', group: :test
