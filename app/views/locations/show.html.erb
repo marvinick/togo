@@ -18,7 +18,13 @@
   <%= @location.longitude %>
 </p>
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'>
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+  </div>
+</div>
+
+
 
 <h3>Nearby Locations</h3>
 <ul>
