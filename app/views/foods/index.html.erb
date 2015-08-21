@@ -1,18 +1,13 @@
-
 <div class="container">
-
   <div class="row">
-     <% @foods.each do |food| %>
-    <div class="col-md-3">
-      <div class="thumbnail">
-        <%= link_to (image_tag food.image_url(:thumb).to_s), food %>
-        <h3 class="text-center"><%= link_to food.name, food %></h3>
+    <% @foods.each do |food| %>
+      <div class="col-md-3">
+        <center><%= link_to (image_tag food.image_url(:thumb).to_s), food %></center>
+        <h3 class="text-center"><%= food.name %></h3>
       </div>
-    </div>
-   <% end %>
-    <br/>
+    <% end %>
     <div class="col-md-12">
-      <h4><%= link_to 'New', new_food_path %></h4>
+      <h4 class="text-center"><%= link_to 'New', new_food_path %></h4>
     </div>
   </div>
 </div>

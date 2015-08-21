@@ -1,9 +1,13 @@
 <div class="container">
-  <h3>Category</h3>
-  <h4><%= @category.name %></h4>
-  <h4><%= link_to "Edit", edit_category_path %> || <%= link_to "Delete", category_path, method: :delete %></h4>
-  <h4><ul class="list-unstyled"><% @category.foods.each do |food| %>
-      <li><%= food.name %></li>
+  <div class="row">
+    <h3><%= @category.name %></h3>
+    <h4><%= link_to "Edit", edit_category_path %> || <%= link_to "Delete", category_path, method: :delete %></h4>
+    <br>
+    <% @category.foods.each do |food| %>
+      <div class="col-md-3">
+        <center><%= link_to (image_tag food.image_url(:thumb).to_s), food %></center>
+        <h3 class="text-center"><%= food.name %></h3>
+      </div>
     <% end %>
-  </ul></h4>
+  </div>
 </div>
