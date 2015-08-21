@@ -1,7 +1,7 @@
 <div class="container">
   <h3>Category</h3>
-  <h4><%= link_to @category.name %></h4>
-
+  <h4><%= @category.name %></h4>
+  <h4><%= link_to "Edit", edit_category_path %> || <%= link_to "Delete", category_path, method: :delete %></h4>
   <h4><ul class="list-unstyled"><% @category.foods.each do |food| %>
       <li><%= food.name %></li>
     <% end %>

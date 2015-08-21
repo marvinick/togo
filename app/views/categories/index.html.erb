@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-4">
       <% @categories.each do |category| %>
-      <h4><%= category.name %></h4>
+      <h4><%= link_to category.name, category %></h4>
       <% end %>
     </div>
     <div class="col-md-4">

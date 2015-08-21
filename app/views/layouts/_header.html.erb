@@ -27,7 +27,7 @@
             <% end %>
         </div>
 
-        <ul class="nav navbar-nav navbar-right" role="search">
+        <ul class="nav navbar-nav navbar-right">
           <li>
             <div id="container">
               <div id="user_nav">
@@ -36,6 +36,7 @@
                   Logged in as <strong><%= current_user.email %></strong>.
                   <%= link_to 'Edit profile', edit_user_registration_path %> |
                   <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                  <%= link_to "Categories", categories_path %>
                 <% else %>
 
                    <form class="navbar-form navbar-right" role="search">

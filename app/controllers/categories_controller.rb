@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
       def create
         @category = Category.new(category_params)
         if @category.save
-          redirect_to root_path
+          redirect_to foods_path
         else
           render :new
         end
@@ -32,6 +32,7 @@ class CategoriesController < ApplicationController
 
       def destroy
         @category.destroy
+        redirect_to categories_path
       end
 
       private
