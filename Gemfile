@@ -8,7 +8,6 @@ gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'cancan'
 
 # takes care rails 4.2 beta errors
 gem 'arel', '6.0.0.beta2'
@@ -19,12 +18,13 @@ gem 'gmaps4rails'
 gem 'nifty-generators'
 
 # views and forms
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 gem "font-awesome-rails"
 
 # authentication
 gem "devise"
+gem 'cancan'
 
 # image upload
 gem 'paperclip'

@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def require_admin
+    access_denied unless user_signed_in? and current_user.admin?
+  end
 
+  def access_denied
+    redirect_to root_path
   end
 end
