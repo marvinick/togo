@@ -10,25 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 </head>
 <body>
-  <header>
-      <div class="navbar         <div class="navbar-inner">
-          <div class="container">
-            <%= render "layouts/header" %>
-          </div>
-      </div>
-    </div>
-  </header>
-  <div id="main" role="main">
-      <div class="container">
-         <div class="row">
-          <div class="span12">
-            <%= render 'layouts/messages' %>
-            <%= yield %>
-          </div>
-        </div>
-        <footer>
-        </footer>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
-  </body>
+  <%= render "layouts/header" %>
+  <% if current_page?(root_path) %>
+    <div class="landing">
+  <% else %>
+    <div class="container">
+  <% end %>
+    <%= yield %>
+
+</body>
 </html>
