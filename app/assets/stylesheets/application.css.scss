@@ -17,7 +17,7 @@
  */
 
  body {
-  padding-top: 70px;
+  padding-top: 50px;
  }
 
  #sticky {
@@ -34,7 +34,6 @@
   -moz-box-shadow: 0px 0px 15px 0px #000000;
   box-shadow: 0px 0px 15px 0px #000000;
   /* Adds the transparent background */
-
   opacity: 0.9;
 }
 
@@ -51,34 +50,6 @@ div.nav_item {
 
 .navbar .nav > li > a.brand {
   padding-left: 10px;
-}
-
-.form-signin {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
-}
-.form-signin .checkbox {
-  font-weight: normal;
-}
-.form-signin .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-.form-signin input {
-  margin-bottom: 10px;
 }
 
 .pull-left li {

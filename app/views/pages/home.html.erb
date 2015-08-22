@@ -84,16 +84,3 @@
       </div>
     </div>
   </footer>
-<div class="jumbotron">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h3 class="text-center">instagram gallery</h3>
-        <% @instagram.each do |instagram| %>
-          <%= image_tag instagram.images.thumbnail.url %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
-<hr>

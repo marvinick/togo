@@ -4,6 +4,7 @@ class FoodsController < ApplicationController
 
   def index
     @foods = Food.all
+    @instagram = Instagram.user_recent_media("415164868", {:count => 50})
   end
 
   def new
