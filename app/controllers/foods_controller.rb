@@ -1,6 +1,7 @@
 class FoodsController < ApplicationController
   before_action :set_food, only:[:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show]
+  before_action :food_creator, only: [:edit, :update, :destroy]
 
   def index
     @foods = current_user.foods
@@ -40,11 +41,19 @@ class FoodsController < ApplicationController
 
   private
 
+  def food_creator
+    unless @food.user_id == current_user.id
+      redirect_to root_path
+    end
+  end
+
   def set_food
     @food = Food.find(params[:id])
   end
 
   def food_params
-    params.require(:food).permit(:name, :content, :gluten, :image, :resource, :user_id, category_ids: [], )
+    params.require(:food).permit(:name, :content, :gluten, :image, :resource, :user_id, category_ids: [])
   end
+
 end
+
