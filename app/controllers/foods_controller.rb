@@ -3,7 +3,7 @@ class FoodsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @foods = Food.all
+    @foods = current_user.foods
     @instagram = Instagram.user_recent_media("415164868", {:count => 50})
   end
 
@@ -13,6 +13,7 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
+    @food.user_id = current_user.id if current_user
     if @food.save
       redirect_to foods_path
     else
@@ -44,6 +45,6 @@ class FoodsController < ApplicationController
   end
 
   def food_params
-    params.require(:food).permit(:name, :content, :gluten, :image, :resource, category_ids: [])
+    params.require(:food).permit(:name, :content, :gluten, :image, :resource, :user_id, category_ids: [], )
   end
 end

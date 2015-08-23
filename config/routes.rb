@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  resources :locations
+
+  root to: "pages#home"
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: { registrations: "registrations"}
+
   resources :foods
   resources :categories
-  root to: "pages#home"
+  resources :locations
+
   get 'dashboard', to: "pages#dashboard"
 
   devise_scope :user do
