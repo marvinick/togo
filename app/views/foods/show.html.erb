@@ -10,5 +10,7 @@
     </div>
   </div>
   <hr>
+  <% if user_signed_in? and (current_user.id == @food.user_id) %>
   <center><h4><%= link_to "Edit", edit_food_path %> || <%= link_to "Delete", food_path, method: :delete %></h4></center>
+  <% end %>
 </div>

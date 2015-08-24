@@ -4,7 +4,7 @@ class FoodsController < ApplicationController
   before_action :food_creator, only: [:edit, :update, :destroy]
 
   def index
-    @foods = current_user.foods
+    @foods = Food.all
     @instagram = Instagram.user_recent_media("415164868", {:count => 50})
   end
 
@@ -22,7 +22,9 @@ class FoodsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+
+  end
 
   def edit; end
 
