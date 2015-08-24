@@ -24,7 +24,6 @@ gem "font-awesome-rails"
 
 # authentication
 gem "devise"
-gem 'cancan'
 
 # image upload
 gem 'paperclip'
