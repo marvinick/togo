@@ -1,33 +1,34 @@
 <div class"container">
   <div class="row">
     <div class="col-md-2">
-    <h3><%= @user.username %></h3>
-    <h5><%= @user.about %></h5>
-
+      <h3><%= @user.username %></h3>
+      <h5><%= @user.about %></h5>
+      <h6><%= link_to "Add", new_food_path %></h4>
+      <h6><%= link_to "Categories", categories_path %></h4>
+      <h6><%= link_to "Add Location", new_location_path %></h4>
     </div>
-    <div class="col-md-5">
-      <h3>Foods</h3>
+    <div class="col-md-12">
+      <h3>Products</h3>
       <table class="table">
         <thead>
           <tr>
             <th>Name</th>
-            <th>Created</th>
-            <th>Category</th>
+            <th>Content</th>
+            <th>Posted at</th>
+            <th>Photo</th>
           </tr>
         </thead>
         <tbody>
           <% @foods.each do |food| %>
           <tr>
             <td><%= link_to food.name, food %></td>
+            <td><%= truncate food.content, length: 100 %></td>
             <td><%= time_ago_in_words(food.created_at) %> ago</td>
-
+            <td><%= image_tag food.image_url(:thumb).to_s %></td>
           </tr>
           <% end %>
         </tbody>
       </table>
-
-        <h4><%= link_to "Add Food", new_food_path %></h4>
-        <h4><%= link_to "Categories", categories_path %></h4>
     </div>
   </div>
 </div>
