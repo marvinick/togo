@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
   # attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-  validates_presence_of :username
-  validates_uniqueness_of :username
+  validates_presence_of :name
+  validates_uniqueness_of :name
 
   def admin?
     self.role == "admin"
@@ -21,6 +21,16 @@ class User < ActiveRecord::Base
 
   def moderator?
     self.role == "moderator"
+  end
+
+  acts_as_messageable
+
+  def mailboxer_name
+    self.name
+  end
+
+  def mailboxer_email(object)
+    self.email
   end
 
 end
