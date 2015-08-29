@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # takes care rails 4.2 beta errors
 gem 'arel', '6.0.0.beta2'
 
+#messaging
+gem 'mailboxer'
+
 #map
 gem 'geocoder'
 gem 'gmaps4rails'

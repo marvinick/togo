@@ -3,7 +3,7 @@
 }
 
 .landing {
-  background: image-url("wooden.jpg") no-repeat center center fixed;
+  background: image-url("soil.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -25,7 +25,7 @@
   margin-bottom: 0px;
 }
 
-h3 span {
+h2 span {
    color: white;
    font: bold 24px/45px Helvetica, Sans-Serif;
    letter-spacing: -1px;
@@ -35,6 +35,6 @@ h3 span {
    opacity: 0.6;
 }
 
-h3 span.spacer {
+h2 span.spacer {
    padding:0 5px;
 }
