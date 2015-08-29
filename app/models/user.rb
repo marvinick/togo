@@ -12,8 +12,8 @@ class User < ActiveRecord::Base
   # attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-  validates_presence_of :name
-  validates_uniqueness_of :name
+  validates_presence_of :username
+  validates_uniqueness_of :username
 
   def admin?
     self.role == "admin"
@@ -25,8 +25,8 @@ class User < ActiveRecord::Base
 
   acts_as_messageable
 
-  def mailboxer_name
-    self.name
+  def mailboxer_username
+    self.username
   end
 
   def mailboxer_email(object)
