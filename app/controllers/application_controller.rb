@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+  helper_method :mailbox
 
   def require_admin
     access_denied unless user_signed_in? and current_user.admin?
@@ -19,4 +20,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :name
     devise_parameter_sanitizer.for(:account_update) << :name
   end
+
+  private
+    def mailbox
+      @mailbox ||= current_user.mailbox
+    end
 end
