@@ -22,7 +22,8 @@ class ApplicationController < ActionController::Base
   end
 
   private
-    def mailbox
-      @mailbox ||= current_user.mailbox
-    end
+  def mailbox
+    @mailbox ||= current_user.mailbox
+  end
+
 end
