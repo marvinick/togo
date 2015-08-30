@@ -14,6 +14,7 @@ gem 'arel', '6.0.0.beta2'
 
 #messaging
 gem 'mailboxer'
+gem 'chosen-rails'
 
 #map
 gem 'geocoder'

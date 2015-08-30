@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   # attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-  validates_presence_of :username
+  #validates_presence_of :username
   validates_uniqueness_of :username
 
   def admin?
