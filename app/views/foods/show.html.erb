@@ -27,6 +27,11 @@
         <%= f.submit "Add Review", class: "btn btn-info" %>
       <% end %>
     </div>
+    <% @food.reviews.each do |review| %>
+    <div class="col-md-6">
+      <em><%= review.content %></em>
+    </div>
+    <% end %>
   </div>
   <hr>
 
