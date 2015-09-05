@@ -1,34 +1,93 @@
-<div class"container">
-  <div class="row">
-    <div class="col-md-2">
-      <h3><%= @user.username %></h3>
-      <h5><%= @user.about %></h5>
-      <h6><%= link_to "Add", new_food_path %></h4>
-      <h6><%= link_to "Categories", categories_path %></h4>
-      <h6><%= link_to "Add Location", new_location_path %></h4>
+
+
+
+<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <%= link_to "Add", new_food_path %>
+                </li>
+                <li>
+                   <%= link_to "Categories", categories_path %>
+                </li>
+                <li>
+                    <%= link_to "Add Location", new_location_path %>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-11">
+                        <h1><%= @user.username %></h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-info" id="menu-toggle">Menu</a>
+                    </div>
+
+                    <div class="col-md-11">
+                     <h5><%= @user.about %></h5>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Content</th>
+                            <th>Posted at</th>
+                            <th>Photo</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% @foods.each do |food| %>
+                          <tr>
+                            <td><%= link_to food.name, food %></td>
+                            <td><%= truncate food.content, length: 100 %></td>
+                            <td><%= time_ago_in_words(food.created_at) %> ago</td>
+                            <td><%= image_tag food.image_url(:thumb).to_s %></td>
+                          </tr>
+                          <% end %>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
     </div>
-    <div class="col-md-12">
-      <h3>Products</h3>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Content</th>
-            <th>Posted at</th>
-            <th>Photo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @foods.each do |food| %>
-          <tr>
-            <td><%= link_to food.name, food %></td>
-            <td><%= truncate food.content, length: 100 %></td>
-            <td><%= time_ago_in_words(food.created_at) %> ago</td>
-            <td><%= image_tag food.image_url(:thumb).to_s %></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
