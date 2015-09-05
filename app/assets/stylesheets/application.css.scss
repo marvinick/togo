@@ -17,18 +17,17 @@
  *= require_self
  */
 
- @import 'chosen';
-
 body {
-  padding-top: 70px;
+  padding-top: 60px;
 }
+
 #sticky {
   margin: auto;
   position: fixed;
   z-index:1000;
   top: 0px;
   width: 100%;
-  height: 50px;
+  height: 60px;
   left: 0px;
   right: 0px;
   /* Adds to the bottom of the bar */
@@ -36,7 +35,7 @@ body {
   -moz-box-shadow: 0px 0px 15px 0px #000000;
   box-shadow: 0px 0px 15px 0px #000000;
   /* Adds the transparent background */
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 div.nav_item {
@@ -94,9 +93,6 @@ input[type=checkbox] {
   line-height: 3em;
 }
 
-table, td, th {
-
-}
 
 table {
     width: 100%;
@@ -105,3 +101,61 @@ table {
 th {
     height: 50px;
 }
+
+
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+
+    li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:15px;
+        border-radius:3px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+
+        .tab {
+            display:none;
+        }
+
+        .tab.active {
+            display:block;
+        }
