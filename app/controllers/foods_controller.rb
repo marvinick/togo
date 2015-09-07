@@ -13,10 +13,14 @@ class FoodsController < ApplicationController
   end
 
   def create
+    #select location
+    @location = Location.find(params[:location_id])
+
+    #creating food
     @food = Food.new(food_params)
     @food.user_id = current_user.id if current_user
     if @food.save
-      redirect_to foods_path
+      redirect_to food_path(@food)
     else
       render :new
     end
@@ -54,7 +58,7 @@ class FoodsController < ApplicationController
   end
 
   def food_params
-    params.require(:food).permit(:name, :content, :gluten, :image, :resource, :location_id, :user_id, category_ids: [])
+    params.require(:food).permit(:name, :content, :gluten, :image, :resource, :user_id, category_ids: [])
   end
 
 end
