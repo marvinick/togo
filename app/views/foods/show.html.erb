@@ -1,43 +1,125 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h2><%= @food.name %></h2>
-      <%= image_tag @food.image_url(:show).to_s %>
-    </div>
+<style>
+    /*----- Tabs -----*/
+  .tabs {
+      width:100%;
+      display:inline-block;
+  }
 
-    <div class="col-md-6">
-      <br>
-      <br>
-      <h2>Description</h2>
-      <h4>"<%= @food.content %>"</h4>
-      <% if user_signed_in? and (current_user.id == @food.user_id) %>
-        <h4><%= link_to "Edit", edit_food_path %> || <%= link_to "Delete", food_path, method: :delete %></h4>
-      <% end %>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <% if user_signed_in? %>
-      <div class="col-md-6">
-        <%= form_for [@food, @review] do |f| %>
-          <div class="control-form">
-            <%= f.label :content %>
-            <%= f.text_area :content, rows: 6, span: "span6" %>
-          </div>
+      /*----- Tab Links -----*/
+      /* Clearfix */
+  .tab-links:after {
+      display:block;
+      clear:both;
+      content:'';
+  }
+
+  .tab-links li {
+      margin:0px 5px;
+      float:left;
+      list-style:none;
+  }
+
+  .tab-links a {
+      padding:9px 15px;
+      display:inline-block;
+      border-radius:3px 3px 0px 0px;
+      background:#7fdaa4;
+      font-size:16px;
+      font-weight:600;
+      color:#4c4c4c;
+      transition:all linear 0.15s;
+  }
+
+  .tab-links a:hover {
+      background:#7fdaa4;
+      text-decoration:none;
+  }
+
+  li.active a, li.active a:hover {
+      background:#fff;
+      color:#4c4c4c;
+  }
+
+  /*----- Content of Tabs -----*/
+  .tab-content {
+      padding:15px;
+      border-radius:3px;
+      box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+      background:#fff;
+  }
+
+  .tab {
+      display:none;
+  }
+
+  .tab.active {
+      display:block;
+  }
+</style>
+
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">Main</a></li>
+        <li><a href="#tab2">Reviews</a></li>
+    </ul>
+
+  <div class="tab-content">
+    <div id="tab1" class="tab active">
+      <div class="row">
+        <div class="col-md-6">
+          <h2><%= @food.name %></h2>
+          <%= image_tag @food.image_url(:show).to_s %>
+          <% if user_signed_in? and (current_user.id == @food.user_id) %>
+            <h4><%= link_to "Edit", edit_food_path %> || <%= link_to "Delete", food_path, method: :delete %></h4>
+          <% end %>
+        </div>
+
+        <div class="col-md-6">
           <br>
-          <%= f.submit "Add Review", class: "btn btn-info" %>
+          <br>
+          <h3>Description</h3>
+          <h4>"<%= @food.content %>"</h4>
+        </div>
+      </div>
+    </div>
+    <div id="tab2" class="tab">
+      <div class="row">
+        <% if user_signed_in? %>
+          <div class="col-md-6">
+            <%= form_for [@food, @review] do |f| %>
+              <div class="control-form">
+                <%= f.text_area :content, rows: 6, span: "span6", placeholder:"please leave your comments, 140 max" %>
+              </div>
+              <br>
+              <%= f.submit "Add Review", class: "btn btn-info" %>
+            <% end %>
+          </div>
+          <div class="col-md-6">
+            <h5>Reviews</h5>
+            <% @food.reviews.each do |review| %>
+              <ul>
+                <em>"<%= review.content %>"</em>
+              </ul>
+            <% end %>
+          </div>
         <% end %>
       </div>
-    <% end %>
-      <% @food.reviews.each do |review| %>
-      <div class="col-md-6">
-        <em><%= review.content %></em>
-      </div>
-      <% end %>
-
+    </div>
   </div>
-  <hr>
-
-
-
 </div>
+
+<script>
+  jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+
+        // Show/Hide Tabs
+       jQuery('.tabs ' + currentAttrValue).fadeIn(600).siblings().hide();
+
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+        e.preventDefault();
+    });
+});
+</script>
