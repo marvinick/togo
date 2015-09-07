@@ -1,10 +1,10 @@
 class ReviewsController < ApplicationController
+   before_filter :authenticate_user!
 
   def create
     @food = Food.find(params[:food_id])
-    @review = Review.new(review_params)
-    @review.food = @food
-    # @review.user = current_user
+    @review = @food.reviews.build(review_params)
+    #@review.user = current_user
 
     if @review.save
       redirect_to food_path(@food)

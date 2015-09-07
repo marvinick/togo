@@ -17,21 +17,24 @@
   </div>
   <hr>
   <div class="row">
-    <div class="col-md-6">
-      <%= form_for [@food, @review] do |f| %>
-        <div class="control-form">
-          <%= f.label :content %>
-          <%= f.text_area :content %>
-        </div>
-        <br>
-        <%= f.submit "Add Review", class: "btn btn-info" %>
-      <% end %>
-    </div>
-    <% @food.reviews.each do |review| %>
-    <div class="col-md-6">
-      <em><%= review.content %></em>
-    </div>
+    <% if user_signed_in? %>
+      <div class="col-md-6">
+        <%= form_for [@food, @review] do |f| %>
+          <div class="control-form">
+            <%= f.label :content %>
+            <%= f.text_area :content, rows: 6, span: "span6" %>
+          </div>
+          <br>
+          <%= f.submit "Add Review", class: "btn btn-info" %>
+        <% end %>
+      </div>
     <% end %>
+      <% @food.reviews.each do |review| %>
+      <div class="col-md-6">
+        <em><%= review.content %></em>
+      </div>
+      <% end %>
+
   </div>
   <hr>
 
