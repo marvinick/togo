@@ -94,15 +94,15 @@
               <%= f.submit "Add Review", class: "btn btn-info" %>
             <% end %>
           </div>
-          <div class="col-md-6">
-            <h5>Reviews</h5>
-            <% @food.reviews.each do |review| %>
-              <ul>
-                <em>"<%= review.content %>"</em>
-              </ul>
-            <% end %>
-          </div>
-        <% end %>
+         <% end %>
+        <div class="col-md-6">
+          <h5>Reviews</h5>
+          <% @food.reviews.each do |review| %>
+            <ul>
+              <em>"<%= review.content %>"</em>
+            </ul>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

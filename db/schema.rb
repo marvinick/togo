@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150905203406) do
+ActiveRecord::Schema.define(version: 20150907041301) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150905203406) do
     t.datetime "resource_updated_at"
     t.string   "image"
     t.integer  "user_id"
+    t.integer  "location_id"
   end
 
   create_table "locations", force: true do |t|
