@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   def create
     @food = Food.find(params[:food_id])
     @review = @food.reviews.build(review_params)
-    #@review.user = current_user
+    @review.user_id = current_user.id if current_user
 
     if @review.save
       redirect_to food_path(@food)
