@@ -1,49 +1,49 @@
-<ul>
-  <% for location in @location.nearbys(10) %>
-    <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
-  <% end %>
-</ul>
+<div class="container">
+  <ul>
+    <% for location in @location.nearbys(10) %>
+      <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+    <% end %>
+  </ul>
 
-<h2>Location</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <% @location.foods.each do |food| %>
+        <div class="col-md-6">
+          <center><%= link_to (image_tag food.image_url(:thumb).to_s), food %></center>
+          <h3 class="text-center"><%= food.name %></h3>
+        </div>
+      <% end %>
+    </div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @location.address %>
-</p>
-<p>
-  <strong>Latitude:</strong>
-  <%= @location.latitude %>
-</p>
-<p>
-  <strong>Longitude:</strong>
-  <%= @location.longitude %>
-</p>
+    <div class="col-md-6">
+      <h2>Location</h2>
 
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'>
-      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+      <p>
+        <strong>Address:</strong>
+        <%= @location.address %>
+        <%= @location.latitude %>
+        <%= @location.longitude %>
+      </p>
+      <p>
+        <%= link_to "Edit", edit_location_path(@location) %> |
+        <%= link_to "Destroy", @location, :confirm => 'Are you sure?', :method => :delete %> |
+        <%= link_to "View All", locations_path %>
+      </p>
+
+      <div style='width: 800px;'>
+        <div id="map" style='width: 800px; height: 400px;'>
+            <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+        </div>
+      </div>
+      <h5>Nearby Locations</h5>
+      <ul>
+      <% for location in @location.nearbys(10) %>
+        <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+      <% end %>
+      </ul>
+    </div>
   </div>
+  <hr>
+
 </div>
-
-
-<h3>Nearby Locations</h3>
-<ul>
-<% for location in @location.nearbys(10) %>
-  <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
-<% end %>
-</ul>
-
-
-<p>
-  <%= link_to "Edit", edit_location_path(@location) %> |
-  <%= link_to "Destroy", @location, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", locations_path %>
-</p>
-
-<% @location.foods.each do |food| %>
-  <div class="col-md-3">
-    <center><%= link_to (image_tag food.image_url(:thumb).to_s), food %></center>
-    <h3 class="text-center"><%= food.name %></h3>
-  </div>
-<% end %>
 
