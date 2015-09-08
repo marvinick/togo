@@ -12,8 +12,15 @@
           <% cb.label {cb.check_box(class: "checkbox") + cb.text} %>
         <% end %>
       </ul>
-      <br>
-
+    </div>
+    <br>
+    <div class="control-group">
+      <ul class="list-unstyled">
+        <li><%= f.label "Locations:" %></li>
+        <%= f.collection_check_boxes :location_ids, Location.all, :id, :address do |cb| %>
+          <% cb.label {cb.check_box(class: "checkbox") + cb.text} %>
+        <% end %>
+      </ul>
     </div>
   <%= f.button :submit, class:'btn btn-success btn-lg btn-block' %>
 <% end %>

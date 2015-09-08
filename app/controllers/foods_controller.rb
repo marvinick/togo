@@ -14,7 +14,7 @@ class FoodsController < ApplicationController
 
   def create
     #select location
-    @location = Location.find(params[:location_id])
+    #@location = Location.find(params[:location_id])
 
     #creating food
     @food = Food.new(food_params)
@@ -58,7 +58,7 @@ class FoodsController < ApplicationController
   end
 
   def food_params
-    params.require(:food).permit(:name, :content, :gluten, :image, :resource, :user_id, category_ids: [])
+    params.require(:food).permit(:name, :content, :gluten, :image, :resource, :user_id, category_ids: [], location_ids: [])
   end
 
 end
