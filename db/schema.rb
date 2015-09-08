@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150907041301) do
+ActiveRecord::Schema.define(version: 20150908025802) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -106,6 +106,13 @@ ActiveRecord::Schema.define(version: 20150907041301) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id"
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type"
+
+  create_table "markets", force: true do |t|
+    t.integer  "food_id"
+    t.integer  "location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "reviews", force: true do |t|
     t.text     "content"
