@@ -66,7 +66,9 @@ li.active a, li.active a:hover {
 
     <div class="tab-content">
         <div id="tab1" class="tab active">
+
             <div class="row">
+
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <table class="table">
@@ -76,6 +78,7 @@ li.active a, li.active a:hover {
                         <th>Content</th>
                         <th>Posted at</th>
                         <th>Photo</th>
+                        <th><%= link_to "New", new_food_path %></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -85,6 +88,7 @@ li.active a, li.active a:hover {
                         <td><%= truncate food.content, length: 100 %></td>
                         <td><%= time_ago_in_words(food.created_at) %> ago</td>
                         <td><%= image_tag food.image_url(:thumb).to_s %></td>
+                        <td><%= link_to "Foods", foods_path %></td>
                       </tr>
                       <% end %>
                     </tbody>

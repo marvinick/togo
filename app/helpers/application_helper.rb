@@ -25,4 +25,9 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  # def nice_date(dt)
+  #   dt= dt.in_time_zone(current_user.time_zone || "Time.zone.name") if signed_in?
+  #   dt.strftime("%m/%d/%Y 1:%M%P %Z") # 03/14/2013 9:09pm UTC
+  # end
 end

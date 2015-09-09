@@ -96,11 +96,11 @@
           </div>
          <% end %>
         <div class="col-md-6">
-          <h5>Reviews</h5>
+          <h3>Reviews</h3>
           <% @food.reviews.each do |review| %>
             <ul>
-              <em>"<%= review.content %>"</em>
-              <%= review.user.username %>
+              <h4>"<%= review.content %>"</h4>
+              <em>by <%= review.user.username %> on <%= review.created_at %></em>
             </ul>
           <% end %>
         </div>

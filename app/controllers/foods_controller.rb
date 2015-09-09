@@ -4,7 +4,7 @@ class FoodsController < ApplicationController
   before_action :food_creator, only: [:edit, :update, :destroy]
 
   def index
-    @foods = Food.all
+    @foods = Food.all.reverse
     @instagram = Instagram.user_recent_media("415164868", {:count => 50})
   end
 
