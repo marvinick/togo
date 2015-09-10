@@ -2,6 +2,10 @@
   <div class="row">
     <div class="col-md-12">
       <h3 class="text-center">Categories</h3>
+      <% if user_signed_in? and current_user.admin? %>
+        <h6><%= link_to "Add Category", new_category_path %></h6>
+        <h6><%= link_to "Add Location", locations_path %></h6>
+      <% end %>
       <br>
       <br>
       <% @categories.each do |category| %>
@@ -10,14 +14,6 @@
           <h4 class="text-center"><%= link_to category.name, category %></h4>
         </div>
       <% end %>
-    </div>
-    <hr>
-    <div class="col-md-12">
-      <center>
-        <% if user_signed_in? and current_user.admin? %>
-          <h4 class="text-center"><%= link_to "New", new_category_path %></h4>
-        <% end %>
-      </center>
     </div>
   </div>
 </div>

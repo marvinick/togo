@@ -88,7 +88,7 @@ li.active a, li.active a:hover {
                         <td><%= truncate food.content, length: 100 %></td>
                         <td><%= time_ago_in_words(food.created_at) %> ago</td>
                         <td><%= image_tag food.image_url(:thumb).to_s %></td>
-                        <td><%= link_to "Foods", foods_path %></td>
+                        <td><%= link_to "All Stuff", categories_path %></td>
                       </tr>
                       <% end %>
                     </tbody>
