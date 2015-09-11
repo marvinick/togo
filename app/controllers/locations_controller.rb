@@ -4,8 +4,11 @@ class LocationsController < ApplicationController
   respond_to :html
 
   def index
-    @locations = Location.all
-    respond_with(@locations)
+    if params[:search].present?
+      @locations = Location.near(params[:search], 50, :order => 'distance')
+    else
+      @locations = Location.all
+    end
   end
 
   def show
