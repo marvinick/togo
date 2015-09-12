@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create]
   end
 
+  resources :users
   resources :categories
   resources :locations
 
