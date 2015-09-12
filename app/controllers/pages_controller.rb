@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+
     @user = current_user
     @foods = current_user.foods
   end
