@@ -2,13 +2,16 @@ Rails.application.routes.draw do
 
   root to: "pages#home"
 
+  #users
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: { registrations: "registrations"}
+  match '/users/:id', :to => 'users#show', :as => :user,  :via => :get #display specific user show page
 
+  #foods
+  resources :foods
   resources :foods do
     resources :reviews, only: [:create]
   end
 
-  resources :users
   resources :categories
   resources :locations
 

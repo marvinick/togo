@@ -13,8 +13,6 @@ class FoodsController < ApplicationController
   end
 
   def create
-    #select location
-    #@location = Location.find(params[:location_id])
 
     #creating food
     @food = Food.new(food_params)
