@@ -68,7 +68,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2><%= @food.name %></h2>
-          <h4><%= link_to @food.user.username, dashboard_path %></h4>
+          <h4>sold by <%= link_to @food.user.username, user_path %></h4>
           <%= image_tag @food.image_url(:show).to_s %>
           <% if user_signed_in? and (current_user.id == @food.user_id) %>
             <h4><%= link_to "Edit", edit_food_path %> || <%= link_to "Delete", food_path, method: :delete %></h4>
@@ -101,7 +101,7 @@
           <% @food.reviews.each do |review| %>
             <ul>
               <h4>"<%= review.content %>"</h4>
-              <em>by <%= review.user.username %> on <%= review.created_at %></em>
+              <em>by <%= link_to review.user.username, user_path %> on <%= review.created_at %></em>
             </ul>
           <% end %>
         </div>
