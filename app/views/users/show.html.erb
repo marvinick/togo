@@ -1,1 +1,10 @@
-<%= @user.username %>
+<div class="container">
+  <h1><%= @user.username %></h1>
+<br>
+<h3>My Stuff</h3>
+<br>
+  <% @user.foods.each do |food| %>
+    <%= link_to (image_tag food.image_url(:thumb).to_s), food %>
+    <h3><%= food.name %></h3>
+  <% end %>
+</div>
