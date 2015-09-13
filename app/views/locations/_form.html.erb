@@ -2,7 +2,10 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :address, label: false, placeholder: "city and state" %>
+    <%= f.input :address, label: false, placeholder: "street and/or city" %>
+    <%= f.input :state, label: false, placeholder: "state" %>
+     <%= f.input :zipcode, label: false, placeholder: "zipcode" %>
+
   </div>
 
   <div class="form-actions">

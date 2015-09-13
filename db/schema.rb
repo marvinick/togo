@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150908025802) do
+ActiveRecord::Schema.define(version: 20150913035531) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -52,6 +52,9 @@ ActiveRecord::Schema.define(version: 20150908025802) do
     t.float    "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "state"
+    t.integer  "zipcode"
+    t.string   "country"
   end
 
   create_table "mailboxer_conversation_opt_outs", force: true do |t|
