@@ -15,6 +15,7 @@
 //= require chosen-jquery
 //= require twitter/bootstrap
 //= require turbolinks
+//= require underscore
 //= require gmaps/google
 //= require_tree .
 
@@ -31,3 +32,19 @@ jQuery(document).ready(function() {
         e.preventDefault();
     });
 });
+
+<script>
+var handler = Gmaps.build('Google');
+handler.buildMap({ internal: {id: 'geolocation'} }, function(){
+  if(navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(displayOnMap);
+});
+
+function displayOnMap(position){
+  var marker = handler.addMarker({
+    lat: position.coords.latitude,
+    lng: position.coords.longitude
+  });
+  handler.map.centerOn(marker);
+};
+</script>

@@ -1,10 +1,4 @@
 <div class="container">
-  <ul>
-    <% for location in @location.nearbys(10) %>
-      <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
-    <% end %>
-  </ul>
-
   <div class="row">
     <div class="col-md-12">
       <% @location.foods.each do |food| %>
@@ -17,25 +11,25 @@
 
     <div class="col-md-6">
       <h2>Location</h2>
-
       <p>
         <strong>Address:</strong>
         <%= @location.address %>
-        <%= @location.latitude %>
-        <%= @location.longitude %>
       </p>
       <p>
         <%= link_to "Edit", edit_location_path(@location) %> |
         <%= link_to "Destroy", @location, :confirm => 'Are you sure?', :method => :delete %> |
         <%= link_to "View All", locations_path %>
       </p>
-
       <div style='width: 800px;'>
-        <div id="map" style='width: 800px; height: 400px;'>
-            <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+        <div id="geolocation" style='width: 1000px; height: 400px;'>
+          <%= image_tag "http://maps.google.com/maps/api/staticmap?size=500x400&sensor=true&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+          <br>
         </div>
       </div>
-      <h5>Nearby Locations</h5>
+    </div>
+    <br>
+    <div class="col-md-6">
+      <h4>Nearby Locations</h4>
       <ul>
       <% for location in @location.nearbys(10) %>
         <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
@@ -44,4 +38,4 @@
     </div>
   </div>
 </div>
-
+<hr>

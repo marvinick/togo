@@ -1,13 +1,11 @@
-<%= simple_form_for(@location) do |f| %>
+<%= simple_form_for @location, :html => {:class => 'form-signin' } do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :address %>
-    <%= f.input :latitude %>
-    <%= f.input :longitude %>
+    <%= f.input :address, label: false, placeholder: "city and state" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, class:"btn btn-info" %>
+    <%= f.button :submit, class:"btn btn-info btn-block" %>
   </div>
 <% end %>

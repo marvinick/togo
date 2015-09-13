@@ -20,6 +20,7 @@ gem 'chosen-rails'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'nifty-generators'
+gem 'underscore-rails'
 
 # views and forms
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
