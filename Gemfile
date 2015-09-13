@@ -22,6 +22,9 @@ gem 'gmaps4rails'
 gem 'nifty-generators'
 gem 'underscore-rails'
 
+#search
+gem "searchkick"
+
 # views and forms
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'

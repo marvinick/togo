@@ -11,13 +11,10 @@ class LocationsController < ApplicationController
     end
   end
 
-  def show
-    respond_with(@location)
-  end
+  def show; end
 
   def new
     @location = Location.new
-    respond_with(@location)
   end
 
   def edit
@@ -27,7 +24,6 @@ class LocationsController < ApplicationController
     @location = Location.new(location_params)
     @location.save
     redirect_to locations_path
-    # respond_with(@location)
   end
 
   def update
