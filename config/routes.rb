@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   match '/users/:id', :to => 'users#show', :as => :user,  :via => :get #display specific user show page
 
   #foods
-  resources :foods
+  resources :foods do
+    collection do
+      get :autocomplete
+    end
+  end
+
   resources :foods do
     resources :reviews, only: [:create]
   end

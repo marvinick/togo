@@ -5,11 +5,15 @@ class FoodsController < ApplicationController
 
   def index
     if params[:query].present?
-      @foods = Food.search(params[:query], title: params[:title])
+      @foods = Food.search(params[:query], name: params[:name])
     else
-      @foods = Food.all.title params[:title]
+      @foods = Food.all.name params[:name]
     #@instagram = Instagram.user_recent_media("415164868", {:count => 50})
     end
+  end
+
+  def autocomplete
+    render json: Food.search(params[:query], autocomplete: true, limit: 10).map(&:name)
   end
 
   def new
