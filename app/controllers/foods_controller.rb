@@ -4,8 +4,12 @@ class FoodsController < ApplicationController
   before_action :food_creator, only: [:edit, :update, :destroy]
 
   def index
-    @foods = Food.all.reverse
-    @instagram = Instagram.user_recent_media("415164868", {:count => 50})
+    if params[:query].present?
+      @foods = Food.search(params[:query], title: params[:title])
+    else
+      @foods = Food.all.title params[:title]
+    #@instagram = Instagram.user_recent_media("415164868", {:count => 50})
+    end
   end
 
   def new

@@ -1,4 +1,5 @@
 class Food < ActiveRecord::Base
+  searchkick
 
   validates_presence_of :content
   validates_presence_of :name
