@@ -1,5 +1,5 @@
 <div id="sticky">
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <div id="container">
             <%= form_tag locations_path, method: "get", class: "navbar-form navbar-left" do %>
-            <div class="form-group">m
+            <div class="form-group">
               <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "type a location" %>
             </div>
             <%= submit_tag "Search", name: nil, class: "btn btn-info" %>
@@ -39,6 +39,7 @@
                 <li><%= link_to "Locations", locations_path %></li>
               <% end %>
              </ul>
+
           </div>
         </div>
       </div>
