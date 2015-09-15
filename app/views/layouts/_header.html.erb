@@ -20,20 +20,6 @@
             <%= submit_tag "Search", name: nil, class: "btn btn-info" %>
             <% end %>
 
-            <%= form_tag foods_path, class: "navbar-form navbar-left", method: :get do %>
-              <div class="form-group">
-                <% if params[:query].present? %>
-                  <div class="form-group">
-                    <%= link_to "clear", foods_path, class: "btn btn-info" %>
-                  </div>
-                <% end %>
-                <%= text_field_tag :query, params[:query], class: "form-control", id: "food_search", autocomplete: "off" %>
-                <div class="form-group">
-                  <%= submit_tag "Search", class: "btn btn-info" %>
-                </div>
-              </div>
-            <% end %>
-
 
             <ul class="nav navbar-nav navbar-left">
             </ul>
