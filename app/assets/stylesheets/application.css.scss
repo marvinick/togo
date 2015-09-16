@@ -18,11 +18,10 @@
  */
 
 body {
-  padding-top: 55px;
+  padding-top: 50px;
 }
 
 #sticky {
-  margin: auto;
   position: fixed;
   z-index:1000;
   top: 0px;
@@ -35,7 +34,7 @@ body {
   -moz-box-shadow: 0px 0px 15px 0px #000000;
   box-shadow: 0px 0px 15px 0px #000000;
   /* Adds the transparent background */
-  opacity: 1.0;
+  opacity: 0.9;
 }
 
 div.nav_item {
@@ -59,7 +58,8 @@ div.nav_item {
 
 .nav navbar-right li {
   position: absolute;
-  display: inline;
+  display: inline-block;
+  margin-right: 15p
 }
 
 .nav li {

@@ -8884,179 +8884,212 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
-
+/* line 8, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 body {
-    margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  margin-top: 50px;
+  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+/* line 12, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .header-image {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background: url('http://placehold.it/1900x500') no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  width: 960px;
+  text-align: center;
+  background: url(/assets/soil-5ffd5130ff9409e8fb3646b57bdead43.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
+/* line 25, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .headline {
-    padding: 120px 0;
+  padding: 120px 0;
 }
 
+/* line 29, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .headline h1 {
-    font-size: 130px;
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+  font-size: 130px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
 }
 
+/* line 35, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .headline h2 {
-    font-size: 77px;
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+  font-size: 77px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
 }
 
+/* line 41, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .featurette-divider {
-    margin: 80px 0;
+  margin: 80px 0;
 }
 
+/* line 45, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .featurette {
-    overflow: hidden;
+  overflow: hidden;
 }
 
+/* line 49, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .featurette-image.pull-left {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
+/* line 53, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .featurette-image.pull-right {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
+/* line 57, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 .featurette-heading {
-    font-size: 50px;
+  font-size: 50px;
 }
 
+/* line 61, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
 footer {
+  margin: 50px 0;
+}
+
+@media (max-width: 1200px) {
+  /* line 66, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h1 {
+    font-size: 140px;
+  }
+
+  /* line 70, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h2 {
+    font-size: 63px;
+  }
+
+  /* line 74, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-divider {
     margin: 50px 0;
+  }
+
+  /* line 78, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image.pull-left {
+    margin-right: 20px;
+  }
+
+  /* line 82, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image.pull-right {
+    margin-left: 20px;
+  }
+
+  /* line 86, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-heading {
+    font-size: 35px;
+  }
 }
+@media (max-width: 991px) {
+  /* line 92, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h1 {
+    font-size: 105px;
+  }
 
-@media(max-width:1200px) {
-    .headline h1 {
-        font-size: 140px;
-    }
+  /* line 96, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h2 {
+    font-size: 50px;
+  }
 
-    .headline h2 {
-        font-size: 63px;
-    }
+  /* line 100, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-divider {
+    margin: 40px 0;
+  }
 
-    .featurette-divider {
-        margin: 50px 0;
-    }
+  /* line 104, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image {
+    max-width: 50%;
+  }
 
-    .featurette-image.pull-left {
-        margin-right: 20px;
-    }
+  /* line 108, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image.pull-left {
+    margin-right: 10px;
+  }
 
-    .featurette-image.pull-right {
-        margin-left: 20px;
-    }
+  /* line 112, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image.pull-right {
+    margin-left: 10px;
+  }
 
-    .featurette-heading {
-        font-size: 35px;
-    }
+  /* line 116, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-heading {
+    font-size: 30px;
+  }
 }
+@media (max-width: 768px) {
+  /* line 122, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .container {
+    margin: 0 15px;
+  }
 
-@media(max-width:991px) {
-    .headline h1 {
-        font-size: 105px;
-    }
+  /* line 126, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-divider {
+    margin: 40px 0;
+  }
 
-    .headline h2 {
-        font-size: 50px;
-    }
-
-    .featurette-divider {
-        margin: 40px 0;
-    }
-
-    .featurette-image {
-        max-width: 50%;
-    }
-
-    .featurette-image.pull-left {
-        margin-right: 10px;
-    }
-
-    .featurette-image.pull-right {
-        margin-left: 10px;
-    }
-
-    .featurette-heading {
-        font-size: 30px;
-    }
+  /* line 130, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-heading {
+    font-size: 25px;
+  }
 }
+@media (max-width: 668px) {
+  /* line 136, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h1 {
+    font-size: 70px;
+  }
 
-@media(max-width:768px) {
-    .container {
-        margin: 0 15px;
-    }
+  /* line 140, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h2 {
+    font-size: 32px;
+  }
 
-    .featurette-divider {
-        margin: 40px 0;
-    }
-
-    .featurette-heading {
-        font-size: 25px;
-    }
+  /* line 144, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-divider {
+    margin: 30px 0;
+  }
 }
+@media (max-width: 640px) {
+  /* line 150, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline {
+    padding: 75px 0 25px 0;
+  }
 
-@media(max-width:668px) {
-    .headline h1 {
-        font-size: 70px;
-    }
+  /* line 154, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h1 {
+    font-size: 60px;
+  }
 
-    .headline h2 {
-        font-size: 32px;
-    }
-
-    .featurette-divider {
-        margin: 30px 0;
-    }
+  /* line 158, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .headline h2 {
+    font-size: 30px;
+  }
 }
+@media (max-width: 375px) {
+  /* line 164, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-divider {
+    margin: 10px 0;
+  }
 
-@media(max-width:640px) {
-    .headline {
-        padding: 75px 0 25px 0;
-    }
+  /* line 168, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image {
+    max-width: 100%;
+  }
 
-    .headline h1 {
-        font-size: 60px;
-    }
+  /* line 172, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image.pull-left {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 
-    .headline h2 {
-        font-size: 30px;
-    }
-}
-
-@media(max-width:375px) {
-    .featurette-divider {
-        margin: 10px 0;
-    }
-
-    .featurette-image {
-        max-width: 100%;
-    }
-
-    .featurette-image.pull-left {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .featurette-image.pull-right {
-        margin-bottom: 10px;
-        margin-left: 0;
-    }
+  /* line 177, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/one-page-wonder.css.scss */
+  .featurette-image.pull-right {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
 }
 /* @group Base */
 /* line 9, /usr/local/rvm/gems/ruby-2.0.0-p481/gems/chosen-rails-1.4.3/vendor/assets/stylesheets/chosen.scss */
@@ -11622,16 +11655,10 @@ footer {
  */
 /* line 21, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 body {
-  padding-top: 60px;
-  font-weight: lighter;
+  padding-top: 55px;
 }
 
-/* line 26, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
-.container {
-  font-weight: lighter;
-}
-
-/* line 30, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 25, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 #sticky {
   margin: auto;
   position: fixed;
@@ -11646,68 +11673,68 @@ body {
   -moz-box-shadow: 0px 0px 15px 0px #000000;
   box-shadow: 0px 0px 15px 0px #000000;
   /* Adds the transparent background */
-  opacity: 0.7;
+  opacity: 1.0;
 }
 
-/* line 47, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 42, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 div.nav_item {
   margin-left: 15px;
   float: left;
 }
 
-/* line 52, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 47, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 #sticky li {
   display: inline-block;
   padding-right: 2px;
-  position: abslute;
+  position: absolute;
 }
 
-/* line 58, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 53, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .navbar .nav > li > a.brand {
   padding-left: 10px;
 }
 
-/* line 62, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 57, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .pull-left li {
   font-size: 13px;
 }
 
-/* line 66, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 61, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .nav navbar-right li {
   position: absolute;
-  display: inline-block;
+  display: inline;
 }
 
-/* line 71, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 66, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .nav li {
   display: inline;
   position: absolute;
 }
 
-/* line 76, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 71, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .li {
   display: inline-block;
   list-style: none;
 }
 
-/* line 81, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 76, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .neighborhood-guides {
   border-bottom: 1px solid #dbdbdb;
 }
 
-/* line 85, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 80, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .neighborhood-guides h2 {
   color: #393c3d;
   font-size: 24px;
 }
 
-/* line 90, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 85, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .neighborhood-guides p {
   font-size: 15px;
   margin-bottom: 13px;
 }
 
-/* line 95, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 90, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 input[type=checkbox] {
   display: inline;
   margin-left: 1em;
@@ -11715,18 +11742,18 @@ input[type=checkbox] {
   line-height: 3em;
 }
 
-/* line 103, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 98, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 table {
   width: 100%;
 }
 
-/* line 107, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 102, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 th {
   height: 50px;
 }
 
 /*----- Tabs -----*/
-/* line 113, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 108, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tabs {
   width: 100%;
   display: inline-block;
@@ -11734,21 +11761,21 @@ th {
 
 /*----- Tab Links -----*/
 /* Clearfix */
-/* line 120, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 115, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tab-links:after {
   display: block;
   clear: both;
   content: '';
 }
 
-/* line 126, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 121, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tab-links li {
   margin: 0px 5px;
   float: left;
   list-style: none;
 }
 
-/* line 132, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 127, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tab-links a {
   padding: 9px 15px;
   display: inline-block;
@@ -11760,20 +11787,20 @@ th {
   transition: all linear 0.15s;
 }
 
-/* line 143, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 138, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tab-links a:hover {
   background: #a7cce5;
   text-decoration: none;
 }
 
-/* line 148, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 143, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 li.active a, li.active a:hover {
   background: #fff;
   color: #4c4c4c;
 }
 
 /*----- Content of Tabs -----*/
-/* line 154, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 149, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tab-content {
   padding: 15px;
   border-radius: 3px;
@@ -11781,12 +11808,12 @@ li.active a, li.active a:hover {
   background: #fff;
 }
 
-/* line 161, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 156, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tab {
   display: none;
 }
 
-/* line 165, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
+/* line 160, /Users/marvin8214/Desktop/togo/app/assets/stylesheets/application.css.scss */
 .tab.active {
   display: block;
 }
