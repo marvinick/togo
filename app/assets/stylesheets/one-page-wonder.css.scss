@@ -5,7 +5,11 @@
  */
 
 body {
-    margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    margin-top: 60px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.header {
+    background: image-url("soil.jpg") no-repeat center center scroll;
 }
 
 .header-image {
@@ -14,7 +18,7 @@ body {
      margin: 0 auto;
      width: 960px;
     text-align: center;
-    background: asset_url('soil.jpg') no-repeat center center scroll;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
