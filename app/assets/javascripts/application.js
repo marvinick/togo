@@ -17,7 +17,6 @@
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
-//= require angular
 //= require_tree .
 
 jQuery(document).ready(function() {
