@@ -10,34 +10,14 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
 //= require chosen-jquery
 //= require twitter/bootstrap
-
 //= require underscore
 //= require gmaps/google
 //= require angular
-//= require angular-rails-templates
-//= require angular-ui-router
 //= require turbolinks
 //= require_tree .
 
-jQuery(document).ready(function() {
-    jQuery('.tabs .tab-links a').on('click', function(e)  {
-        var currentAttrValue = jQuery(this).attr('href');
-
-        // Show/Hide Tabs
-        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
-
-        // Change/remove current tab to active
-        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
-
-        e.preventDefault();
-    });
-});
-
-<script>
 var handler = Gmaps.build('Google');
 handler.buildMap({ internal: {id: 'geolocation'} }, function(){
   if(navigator.geolocation)
@@ -51,4 +31,3 @@ function displayOnMap(position){
   });
   handler.map.centerOn(marker);
 };
-</script>

@@ -46,10 +46,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    angular-rails-templates (0.2.0)
-      railties (>= 3.1)
-      sprockets (~> 2)
-      tilt
+    angularjs-rails (1.4.4)
     arel (6.0.0)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -157,12 +154,9 @@ GEM
       carrierwave (>= 0.5.8)
       foreigner (>= 0.9.1)
       rails (>= 3.2.0)
-    metaclass (0.0.4)
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.0)
-    mocha (1.1.0)
-      metaclass (~> 0.0.1)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     nifty-generators (0.4.6)
@@ -225,7 +219,7 @@ GEM
       activemodel
       elasticsearch (>= 1)
       hashie
-    simple_form (3.1.1)
+    simple_form (3.2.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     spring (1.4.0)
@@ -262,7 +256,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angular-rails-templates
+  angularjs-rails
   arel (= 6.0.0)
   byebug
   carrierwave
@@ -277,7 +271,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails (~> 4.0.0.beta2)
   mailboxer
-  mocha
   nifty-generators
   pg
   rails (= 4.2.0)

@@ -31,7 +31,7 @@ gem "searchkick"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 gem "font-awesome-rails"
-gem 'angular-rails-templates'
+gem 'angularjs-rails'
 
 # authentication
 gem "devise"
@@ -58,9 +58,5 @@ group :development, :test do
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
 end
-
-gem 'mocha', group: :test
-
-
 
 

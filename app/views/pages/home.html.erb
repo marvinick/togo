@@ -20,17 +20,11 @@
             <span class="text-muted">grow your home</span>
         </h2>
         <p class="lead">only you know what can you make of your home.</p>
-
-        <div ng-controller="CultiviCtrl">
             <form>
                 <input type="text" ng-model="newEntry.name">
             </form>
-            <ul>
-                <li ng-repeat="entry in entries">
-                    {{ entry.name }}
-                </li>
-            </ul>
-        </div>
+            {{ newEntry.name }}
+
     </div>
 
     <hr class="featurette-divider">
