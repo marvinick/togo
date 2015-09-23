@@ -11,7 +11,6 @@ gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 1.3.0'
 
-
 # takes care rails 4.2 beta errors
 gem 'arel', '6.0.0'
 
@@ -32,6 +31,7 @@ gem "searchkick"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'simple_form'
 gem "font-awesome-rails"
+gem 'angular-rails-templates'
 
 # authentication
 gem "devise"

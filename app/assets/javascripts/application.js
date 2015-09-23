@@ -14,11 +14,13 @@
 //= require jquery_ujs
 //= require chosen-jquery
 //= require twitter/bootstrap
-//= require turbolinks
+
 //= require underscore
 //= require gmaps/google
 //= require angular
+//= require angular-rails-templates
 //= require angular-ui-router
+//= require turbolinks
 //= require_tree .
 
 jQuery(document).ready(function() {
