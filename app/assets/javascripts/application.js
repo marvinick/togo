@@ -17,6 +17,8 @@
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
+//= require angular
+//= require angular-ui-router
 //= require_tree .
 
 jQuery(document).ready(function() {
